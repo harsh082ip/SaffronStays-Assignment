@@ -39,19 +39,51 @@ go run cmd/main.go
 ### Example Response
 ```json
 {
-  "room_id": 101,
+  "room_id": 1200,
   "metrics": {
-    "night_rates": {
-      "average_rate": 150.5,
-      "highest_rate": 200.0,
-      "lowest_rate": 120.0
-    },
     "occupancy": [
       {
-        "month": "January 2024",
-        "occupancy_percentage": 64.52
+        "month": "December 2024",
+        "total_days": 31,
+        "available_days": 1,
+        "occupancy_percentage": 3.23
+      },
+      {
+        "month": "February 2025",
+        "total_days": 28,
+        "available_days": 6,
+        "occupancy_percentage": 21.43
+      },
+      {
+        "month": "April 2025",
+        "total_days": 30,
+        "available_days": 3,
+        "occupancy_percentage": 10
+      },
+      {
+        "month": "May 2025",
+        "total_days": 31,
+        "available_days": 1,
+        "occupancy_percentage": 3.23
+      },
+      {
+        "month": "January 2025",
+        "total_days": 31,
+        "available_days": 3,
+        "occupancy_percentage": 9.68
+      },
+      {
+        "month": "March 2025",
+        "total_days": 31,
+        "available_days": 2,
+        "occupancy_percentage": 6.45
       }
-    ]
+    ],
+    "night_rates": {
+      "average_rate": 132.16375,
+      "highest_rate": 218.38,
+      "lowest_rate": 57.71
+    }
   }
 }
 ```

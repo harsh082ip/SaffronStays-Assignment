@@ -1,12 +1,17 @@
 package models
 
-import "time"
+import (
+	"time"
+
+	"github.com/lib/pq"
+)
 
 type Room struct {
-	RoomID         int         `json:"room_id"`
-	RatePerNight   float64     `json:"rate_per_night"`
-	MaxGuests      int         `json:"max_guests"`
-	AvailableDates []time.Time `json:"available_dates"` // Dates when the room is available
+	RoomID            int            `json:"room_id"`
+	RatePerNight      []float64      `json:"rate_per_night"`
+	MaxGuests         int            `json:"max_guests"`
+	AvailableDates    []time.Time    `json:"available_dates"` // Dates when the room is available
+	AvailableDatesRaw pq.StringArray `json:"-"`               // Temporarily store the date strings
 }
 
 type NightRates struct {
